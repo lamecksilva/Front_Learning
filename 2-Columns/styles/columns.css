@@ -1,0 +1,76 @@
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  background-color: #3356a1;
+  margin: 0;
+}
+
+#homeTitle {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#columns {
+  width: 100%;
+  height: 100vh;
+  background-color: #7533a1;
+  margin: 0;
+  border-top: 2px solid tomato;
+}
+
+#tableDiv{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 10% auto 10%;
+  justify-content: space-around;
+}
+
+#item1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(179, 89, 101);
+}
+
+#item2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #91862a;
+}
+
+#item3{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #2da529
+}
+
+#tableTitle{
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande","Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  line-height: 50vh;
+  margin: 0;
+}
