@@ -1,0 +1,25 @@
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#home{
+  width: 100vw;
+  height: 100vh;
+  background-color: #3356a1;
+  margin: 0;
+}
+
+#homeTitle{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  line-height: 100vh;
+  text-align: center;
+}
