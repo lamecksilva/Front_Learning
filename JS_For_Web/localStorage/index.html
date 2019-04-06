@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test Page</title>
+  </head>
+  <body>
+    <div>
+      <label>Name: </label>
+      <input name="name" type="text" />
+      <label>Quantity:</label>
+      <input name="qtd" type="number" />
+      <button onclick="addItem()">
+        Add to LS
+      </button>
+    </div>
+    <div class="items">
+      <h1>Items</h1>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    getItems();
+
+    function addItem() {
+      const id = (Math.random() * 100).toFixed(1);
+      const name = $('input[name=name]').val();
+      const qtd = $('input[name=qtd]').val();
+
+      JSON.parse(localStorage.getItem('items')) === null
+        ? localStorage.setItem('items', JSON.stringify([{ id, name, qtd }]))
+        : localStorage.setItem(
+            'items',
+            JSON.stringify([
+              ...JSON.parse(localStorage.getItem('items')),
+              { id, name, qtd }
+            ])
+          );
+
+      renderItem({ id, name, qtd });
+    }
+
+    function getItems() {
+      const ls = JSON.parse(localStorage.getItem('items'));
+
+      ls.forEach(item => renderItem(item));
+    }
+
+    function renderItem(item) {
+      $('.items').append(
+        `<div><small>(${item.id})</small>: <strong>${item.name}</strong> - ${
+          item.qtd
+        }</div>`
+      );
+    }
+  </script>
+</html>
